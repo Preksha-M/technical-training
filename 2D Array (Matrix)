@@ -1,0 +1,44 @@
+int R = sc.nextInt();
+ int C = sc.nextInt();
+int[][] a = new int[R][C];
+for (int i = 0; i < R; i++) {
+ for (int j = 0; j < C; j++) {
+ a[i][j] = sc.nextInt();
+}
+}
+System.out.println("Matrix:");
+for (int i = 0; i < R; i++) {
+for (int j = 0; j < C; j++) {
+ System.out.print(a[i][j] + " ");
+}
+ System.out.println();
+}
+ System.out.print("Row Sums = [");
+for (int i = 0; i < R; i++) {
+ int sum = 0;
+ for (int j = 0; j < C; j++) {
+ sum += a[i][j];
+ }
+System.out.print(sum);
+if (i < R - 1)
+System.out.print(", ");
+}
+System.out.println("]");
+System.out.print("Col Sums = [");
+for (int j = 0; j < C; j++) {
+ int sum = 0;
+for (int i = 0; i < R; i++) {
+ sum += a[i][j];
+}
+ System.out.print(sum);
+ if (j < C - 1)
+ System.out.print(", ");
+ }
+System.out.println("]");
+System.out.println("Transpose:");
+for (int j = 0; j < C; j++) {
+ for (int i = 0; i < R; i++) {
+  System.out.print(a[i][j] + " ");
+}
+ System.out.println();
+}
