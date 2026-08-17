@@ -1,23 +1,27 @@
+import java.util.*;
+public class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
 int R = sc.nextInt();
- int C = sc.nextInt();
+int C = sc.nextInt();
 int[][] a = new int[R][C];
 for (int i = 0; i < R; i++) {
- for (int j = 0; j < C; j++) {
- a[i][j] = sc.nextInt();
+for (int j = 0; j < C; j++) {
+a[i][j] = sc.nextInt();
 }
 }
 System.out.println("Matrix:");
 for (int i = 0; i < R; i++) {
 for (int j = 0; j < C; j++) {
- System.out.print(a[i][j] + " ");
+System.out.print(a[i][j] + " ");
 }
- System.out.println();
+System.out.println();
 }
- System.out.print("Row Sums = [");
+System.out.print("Row Sums = [");
 for (int i = 0; i < R; i++) {
- int sum = 0;
- for (int j = 0; j < C; j++) {
- sum += a[i][j];
+int sum = 0;
+for (int j = 0; j < C; j++) {
+sum += a[i][j];
  }
 System.out.print(sum);
 if (i < R - 1)
